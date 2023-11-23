@@ -1,4 +1,15 @@
-{
+{  
+  "type": "module",
+  "name": "1122-linebot-hw",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js --ignore ./dump/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "eslint": "^8.54.0",
     "eslint-config-standard": "^17.1.0",
@@ -11,6 +22,7 @@
     "axios": "^1.6.2",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.3.1",
+    "init": "^0.1.2",
     "linebot": "^1.6.1"
   }
 }
