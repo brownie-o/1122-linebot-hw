@@ -42,7 +42,7 @@ const main = async (event) => {
 
     for (const villager of data.data) {
       let $ = cheerio.load(villager.名字)
-      if (id == $('a').text()) {
+      if (id === $('a').text()) {
         const 名字 = $('a').text()
       }
     }
