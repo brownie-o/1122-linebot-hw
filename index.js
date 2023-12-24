@@ -8,6 +8,7 @@ const bot = linebot({
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 })
 
+// message = 收到訊息時
 bot.on('message', event => {
   if (process.env.DEBUG === 'true') {
     console.log(event)
