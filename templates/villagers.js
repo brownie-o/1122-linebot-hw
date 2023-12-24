@@ -5,13 +5,10 @@ export default () => {
       type: 'image',
       url: 'https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
       size: 'full',
-      aspectRatio: '20:16',
+      aspectRatio: '20:15',
       aspectMode: 'fit',
-      action: {
-        type: 'uri',
-        uri: 'http://linecorp.com/'
-      },
-      align: 'center'
+      align: 'center',
+      margin: 'sm'
     },
     body: {
       type: 'box',
@@ -181,45 +178,45 @@ export default () => {
                   flex: 5
                 }
               ]
-            },
-            {
-              type: 'box',
-              layout: 'baseline',
-              spacing: 'sm',
-              contents: [
-                {
-                  type: 'text',
-                  color: '#aaaaaa',
-                  size: 'sm',
-                  text: '你可以考慮：',
-                  align: 'start',
-                  weight: 'bold'
-                }
-              ],
-              margin: 'md'
             }
+            // {
+            //   type: 'box',
+            //   layout: 'baseline',
+            //   spacing: 'sm',
+            //   contents: [
+            //     {
+            //       type: 'text',
+            //       color: '#aaaaaa',
+            //       size: 'sm',
+            //       text: '你可以考慮：',
+            //       align: 'start',
+            //       weight: 'bold'
+            //     }
+            //   ],
+            //   margin: 'md'
+            // }
           ]
         }
       ]
-    },
-    footer: {
-      type: 'box',
-      layout: 'horizontal',
-      contents: [
-        {
-          type: 'image',
-          url: 'https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
-          position: 'relative',
-          aspectMode: 'cover'
-        },
-        {
-          type: 'image',
-          url: 'https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
-          aspectMode: 'cover',
-          position: 'relative'
-        }
-      ],
-      flex: 0
     }
+    // footer: {
+    //   type: 'box',
+    //   layout: 'horizontal',
+    //   contents: [
+    //     {
+    //       type: 'image',
+    //       url: 'https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
+    //       position: 'relative',
+    //       aspectMode: 'cover'
+    //     },
+    //     {
+    //       type: 'image',
+    //       url: 'https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
+    //       aspectMode: 'cover',
+    //       position: 'relative'
+    //     }
+    //   ],
+    //   flex: 0
+    // }
   }
 }
