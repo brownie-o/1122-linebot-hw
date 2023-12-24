@@ -5,12 +5,13 @@ export default () => {
       type: 'image',
       url: 'https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png',
       size: 'full',
-      aspectRatio: '20:13',
-      aspectMode: 'cover',
+      aspectRatio: '20:16',
+      aspectMode: 'fit',
       action: {
         type: 'uri',
         uri: 'http://linecorp.com/'
-      }
+      },
+      align: 'center'
     },
     body: {
       type: 'box',
@@ -31,88 +32,100 @@ export default () => {
             {
               type: 'box',
               layout: 'horizontal',
-              spacing: 'sm',
               contents: [
                 {
-                  type: 'text',
-                  text: '個性',
-                  color: '#aaaaaa',
-                  size: 'sm',
-                  flex: 1
+                  type: 'box',
+                  layout: 'horizontal',
+                  spacing: 'sm',
+                  contents: [
+                    {
+                      type: 'text',
+                      text: '個性',
+                      color: '#aaaaaa',
+                      size: 'sm',
+                      flex: 3
+                    },
+                    {
+                      type: 'text',
+                      wrap: true,
+                      color: '#666666',
+                      size: 'sm',
+                      flex: 5,
+                      text: '普通'
+                    }
+                  ]
                 },
                 {
-                  type: 'text',
-                  wrap: true,
-                  color: '#666666',
-                  size: 'sm',
-                  flex: 5,
-                  text: '普通'
+                  type: 'box',
+                  layout: 'horizontal',
+                  spacing: 'sm',
+                  contents: [
+                    {
+                      type: 'text',
+                      text: '口頭禪',
+                      color: '#aaaaaa',
+                      size: 'sm',
+                      flex: 3
+                    },
+                    {
+                      type: 'text',
+                      wrap: true,
+                      color: '#666666',
+                      size: 'sm',
+                      flex: 5,
+                      text: '"你好"'
+                    }
+                  ]
                 }
               ]
             },
             {
               type: 'box',
               layout: 'horizontal',
-              spacing: 'sm',
               contents: [
                 {
-                  type: 'text',
-                  text: '口頭禪',
-                  color: '#aaaaaa',
-                  size: 'sm',
-                  flex: 1
+                  type: 'box',
+                  layout: 'horizontal',
+                  spacing: 'sm',
+                  contents: [
+                    {
+                      type: 'text',
+                      text: '性別',
+                      color: '#aaaaaa',
+                      size: 'sm',
+                      flex: 3
+                    },
+                    {
+                      type: 'text',
+                      wrap: true,
+                      color: '#666666',
+                      size: 'sm',
+                      flex: 5,
+                      text: '雄'
+                    }
+                  ]
                 },
                 {
-                  type: 'text',
-                  wrap: true,
-                  color: '#666666',
-                  size: 'sm',
-                  flex: 5,
-                  text: '你好'
-                }
-              ]
-            },
-            {
-              type: 'box',
-              layout: 'baseline',
-              spacing: 'sm',
-              contents: [
-                {
-                  type: 'text',
-                  text: '性別',
-                  color: '#aaaaaa',
-                  size: 'sm',
-                  flex: 1
-                },
-                {
-                  type: 'text',
-                  text: '雄',
-                  wrap: true,
-                  color: '#666666',
-                  size: 'sm',
-                  flex: 5
-                }
-              ]
-            },
-            {
-              type: 'box',
-              layout: 'baseline',
-              spacing: 'sm',
-              contents: [
-                {
-                  type: 'text',
-                  text: '生日',
-                  color: '#aaaaaa',
-                  size: 'sm',
-                  flex: 1
-                },
-                {
-                  type: 'text',
-                  text: '1月1號',
-                  wrap: true,
-                  color: '#666666',
-                  size: 'sm',
-                  flex: 5
+                  type: 'box',
+                  layout: 'horizontal',
+                  spacing: 'sm',
+                  contents: [
+                    {
+                      type: 'text',
+                      text: '生日',
+                      color: '#aaaaaa',
+                      size: 'sm',
+                      flex: 3
+                    },
+                    {
+                      type: 'text',
+                      wrap: true,
+                      color: '#666666',
+                      size: 'sm',
+                      flex: 5,
+                      text: '1月1號'
+                    }
+                  ]
                 }
               ]
             },
