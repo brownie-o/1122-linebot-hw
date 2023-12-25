@@ -60,12 +60,76 @@ bot.on('message', event => {
           ]
         }
       })
-    } else if (event.message.text.trim() === '水生動物') {
-      aquaticAnimals(event)
-
+    } else if (event.message.text.includes('水生動物')) {
       event.reply({
         type: 'text',
         text: '正在查詢水生動物',
+        quickReply: {
+          items: [
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                text: '鸭',
+                label: '鴨子'
+              }
+            },
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                text: '青蛙',
+                label: '青蛙'
+              }
+            },
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                text: '章鱼',
+                label: '章魚'
+              }
+            },
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                text: '河马',
+                label: '河馬'
+              }
+            },
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                text: '企鹅',
+                label: '企鵝'
+              }
+            },
+            {
+              type: 'action',
+              action: {
+                type: 'message',
+                text: '鳄鱼',
+                label: '鱷魚'
+              }
+            }
+          ]
+        }
+      })
+    } else if (
+      event.message.text.trim() === '鸭' ||
+      event.message.text.trim() === '青蛙' ||
+      event.message.text.trim() === '章鱼' ||
+      event.message.text.trim() === '河马' ||
+      event.message.text.trim() === '企鹅' ||
+      event.message.text.trim() === '鳄鱼'
+    ) {
+      aquaticAnimals(event)
+    } else if (event.message.text.includes('飛行動物')) {
+      event.reply({
+        type: 'text',
+        text: '正在查詢飛行動物',
         quickReply: {
           items: [
             {
