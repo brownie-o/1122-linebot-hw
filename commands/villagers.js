@@ -1,7 +1,7 @@
 import axios from 'axios'
 import * as cheerio from 'cheerio'
 import villagersTemplate from '../templates/villagers.js'
-// import fs from 'node:fs'
+import fs from 'node:fs'
 
 export default async (event) => {
   try {
@@ -76,6 +76,16 @@ export default async (event) => {
         $ = cheerio.load(villager.顏色2 || '')
         let 顏色2 = $('span').text()
         const 顏色3 = `${顏色 = (顏色 === '紅') ? '紅色' : 顏色}/${顏色2 = (顏色2 === '紅') ? '紅色' : 顏色2}`
+        // 修改圖片出不來的url
+        if (名字 === '阿一') {
+          villager.Img = 'https://soopool.art/image/acnh/animal/Kid%20Cat.png'
+        }
+        if (名字 === '阿二') {
+          villager.Img = 'https://soopool.art/image/acnh/animal/Agent%20S.png'
+        }
+        if (名字 === '阿三') {
+          villager.Img = 'https://soopool.art/image/acnh/animal/Big%20Top.png'
+        }
         const Img = villager.Img
         $ = cheerio.load(villager.Kind)
         const 種類 = $('a').text()
@@ -91,6 +101,11 @@ export default async (event) => {
         template.body.contents[1].contents[4].contents[1].text = 顏色3
         template.body.contents[1].contents[5].contents[1].text = 樣式3
 
+        // 打印出template
+        if (process.env.DEBUG === 'true') {
+          fs.writeFileSync('./dump/villagers.json', JSON.stringify(template, null, 2))
+        }
+
         const result = await event.reply({
           type: 'flex',
           altText: `${名字}的資訊`,
@@ -99,10 +114,6 @@ export default async (event) => {
         console.log(result)
       }
     }
-
-    // if (process.env.DEBUG === 'true') {
-    //   fs.writeFileSync('./dump/villagers.json', JSON.stringify(template, null, 2))
-    // }
   } catch (error) {
     console.log(error)
   }
