@@ -23,7 +23,7 @@ bot.on('message', event => {
       event.reply({
         type: 'text',
         text:
-`您可以在狸端機入口站👾查找島民的個人資訊。
+          `您可以在狸端機入口站👾查找島民的個人資訊。
 
 查詢方式: 
 直接輸入島民的 "姓名" 即可！`
@@ -330,14 +330,6 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '河马',
-                label: '河馬'
-              }
-            },
-            {
-              type: 'action',
-              action: {
-                type: 'message',
                 text: '袋鼠',
                 label: '袋鼠'
               }
@@ -401,110 +393,47 @@ bot.on('message', event => {
           ]
         }
       })
-    } else if (event.message.text.trim() === '鸭') {
-      event.reply({
-        type: 'text',
-        text: '正在以種族查詢',
-        quickReply: {
-          items: [
-            {
-              type: 'action',
-              // 幫quick reply 訊息加icon
-              // "imageUrl": "https://example.com/tempura.png",
-              action: {
-                type: 'message',
-                text: '雄鴨鴨',
-                label: '雄鴨鴨'
-              }
-            },
-            {
-              type: 'action',
-              action: {
-                type: 'message',
-                text: '母鴨鴨',
-                label: '母鴨鴨'
-              }
-            }
-          ]
-        }
-      })
-    } else if (event.message.text.trim() === '企鹅') {
-      event.reply({
-        type: 'text',
-        text: '正在以種族查詢',
-        quickReply: {
-          items: [
-            {
-              type: 'action',
-              action: {
-                type: 'message',
-                text: '雄企鵝',
-                label: '雄企鵝'
-              }
-            },
-            {
-              type: 'action',
-              action: {
-                type: 'message',
-                text: '母企鵝',
-                label: '母企鵝'
-              }
-            }
-          ]
-        }
-      })
-    } else if (event.message.text.trim() === '青蛙') {
-      event.reply({
-        type: 'text',
-        text: '正在以種族查詢',
-        quickReply: {
-          items: [
-            {
-              type: 'action',
-              action: {
-                type: 'message',
-                text: '前半年生日青蛙',
-                label: '前半年生日青蛙'
-              }
-            },
-            {
-              type: 'action',
-              action: {
-                type: 'message',
-                text: '後半年生日青蛙',
-                label: '後半年生日青蛙'
-              }
-            }
-          ]
-        }
-      })
     } else if (
-      // 12+
-      event.message.text.trim() === '母鴨鴨' ||
-      event.message.text.trim() === '雄鴨鴨' ||
-      event.message.text.trim() === '雄企鵝' ||
-      event.message.text.trim() === '母企鵝'
-      // event.message.text.trim() === ('鸭' || '鴨子') ||
-      // event.message.text.trim() === ('企鹅' || '企鵝')
+      // 10+
+      event.message.text.trim() === '鴨子' ||
+      event.message.text.trim() === '狗' ||
+      event.message.text.trim() === '兔子' ||
+      event.message.text.trim() === '馬' ||
+      event.message.text.trim() === '狼' ||
+      event.message.text.trim() === '青蛙' ||
+      event.message.text.trim() === '熊' ||
+      event.message.text.trim() === '小熊' ||
+      event.message.text.trim() === '大象' ||
+      event.message.text.trim() === '鳥' ||
+      event.message.text.trim() === '貓' ||
+      event.message.text.trim() === '老鼠' ||
+      event.message.text.trim() === '綿羊' ||
+      event.message.text.trim() === '豬' ||
+      event.message.text.trim() === '企鵝' ||
+      event.message.text.trim() === '松鼠'
     ) {
-      // 要改: 用種族&性別來分類
       kindVillagers(event)
     } else if (
-      // 12+
-      event.message.text.trim() === '前半年生日青蛙' ||
-      event.message.text.trim() === '後半年生日青蛙'
-      // event.message.text.trim() === '青蛙' ||
-    ) {
-      // 要改: 用種族&生日來分類
-      kindVillagers(event)
-    } else if (
-      // 12-
-      event.message.text.trim() === '章鱼' ||
-      event.message.text.trim() === '河马' ||
-      event.message.text.trim() === '鳄鱼'
-      // event.message.text.trim() === ('章鱼' || '章魚') ||
-      // event.message.text.trim() === ('河马' || '河馬') ||
-      // event.message.text.trim() === ('鳄鱼' || '鱷魚')
+      // 10-
+      event.message.text.trim() === '食蟻獸' ||
+      event.message.text.trim() === '公牛' ||
+      event.message.text.trim() === '河馬' ||
+      event.message.text.trim() === '袋鼠' ||
+      event.message.text.trim() === '無尾熊' ||
+      event.message.text.trim() === '猩猩' ||
+      event.message.text.trim() === '犀牛' ||
+      event.message.text.trim() === '猴子' ||
+      event.message.text.trim() === '小鹿' ||
+      event.message.text.trim() === '章魚' ||
+      event.message.text.trim() === '鴕鳥' ||
+      event.message.text.trim() === '老虎' ||
+      event.message.text.trim() === '雞' ||
+      event.message.text.trim() === '倉鼠' ||
+      event.message.text.trim() === '母牛' ||
+      event.message.text.trim() === '山羊' ||
+      event.message.text.trim() === '獅子' ||
+      event.message.text.trim() === '鵰' ||
+      event.message.text.trim() === '鱷魚'
     ) {
       kindVillagers(event)
     } else {

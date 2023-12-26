@@ -39,10 +39,56 @@ export default async (event) => {
       }
     })
 
-    // 水生動物: 鴨子 青蛙 章魚 河馬 企鵝 鱷魚
-
-    console.log('水生內部')
-    const id = event.message.text.trim()
+    let id = event.message.text.trim()
+    if (event.message.text.trim() === '無尾熊') {
+      id = '考拉'
+    } else if (event.message.text.trim() === '猴子') {
+      id = '猴'
+    } else if (event.message.text.trim() === '貓') {
+      id = '猫'
+    } else if (event.message.text.trim() === '倉鼠') {
+      id = '仓鼠'
+    } else if (event.message.text.trim() === '小鹿') {
+      id = '鹿'
+    } else if (event.message.text.trim() === '綿羊') {
+      id = '羊'
+    } else if (event.message.text.trim() === '豬') {
+      id = '猪'
+    } else if (event.message.text.trim() === '食蟻獸') {
+      id = '食蚁兽'
+    } else if (event.message.text.trim() === '馬') {
+      id = '马'
+    } else if (event.message.text.trim() === '河馬') {
+      id = '河马'
+    } else if (event.message.text.trim() === '猩猩') {
+      id = '大猩猩'
+    } else if (event.message.text.trim() === '大象') {
+      id = '象'
+    } else if (event.message.text.trim() === '鴕鳥') {
+      id = '鸵鸟'
+    } else if (event.message.text.trim() === '老虎') {
+      id = '虎'
+    } else if (event.message.text.trim() === '母牛') {
+      id = '牛'
+    } else if (event.message.text.trim() === '獅子') {
+      id = '狮子'
+    } else if (event.message.text.trim() === '鴨子') {
+      id = '鸭'
+    } else if (event.message.text.trim() === '章魚') {
+      id = '章鱼'
+    } else if (event.message.text.trim() === '河馬') {
+      id = '河马'
+    } else if (event.message.text.trim() === '企鵝') {
+      id = '企鹅'
+    } else if (event.message.text.trim() === '鱷魚') {
+      id = '鳄鱼'
+    } else if (event.message.text.trim() === '鳥') {
+      id = '鸟'
+    } else if (event.message.text.trim() === '雞') {
+      id = '鸡'
+    } else if (event.message.text.trim() === '雕') {
+      id = '鹰'
+    }
     const replies = []
     kind(data, id, replies)
     // await processVillager(data, id, replies, event)
