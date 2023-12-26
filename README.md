@@ -11,7 +11,7 @@
 ## 使用說明  
 - 輸入島民的名字即可查找該島民的資訊  
 
-![botIns](./imgs/linebo.png)
+![botIns](./imgs/linebot_ins.psd)
 
 - (施工中)輸入物種可以查找該種類所有動物的資訊
 

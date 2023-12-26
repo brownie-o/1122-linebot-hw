@@ -19,7 +19,16 @@ bot.on('message', event => {
   // const animal = ['鴨子', '食蟻獸', '狗', '兔子', '馬', '公牛', '青蛙', '狼', '河馬', '袋鼠', '熊', '無尾熊', '小熊', '猩猩', '犀牛', '猴子', '小鹿', '大象', '章魚', '鴕鳥', '老虎', '鳥', '雞', '貓', '老鼠', '倉鼠', '綿羊', '豬', '企鵝', '母牛', '山羊', '獅子', '松鼠', '鵰', '鱷魚']
 
   if (event.message.type === 'text') {
-    if (event.message.text.includes('種族')) {
+    if (event.message.text.includes('說明')) {
+      event.reply({
+        type: 'text',
+        text:
+`您可以在狸端機入口站👾查找島民的個人資訊。
+
+查詢方式: 
+直接輸入島民的 "姓名" 即可！`
+      })
+    } else if (event.message.text.includes('種族')) {
       event.reply({
         type: 'text',
         text: '正在以種族查詢',
@@ -400,6 +409,8 @@ bot.on('message', event => {
           items: [
             {
               type: 'action',
+              // 幫quick reply 訊息加icon
+              // "imageUrl": "https://example.com/tempura.png",
               action: {
                 type: 'message',
                 text: '雄鴨鴨',
