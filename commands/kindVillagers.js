@@ -147,7 +147,7 @@ export default async (event) => {
     // }
     const result = await event.reply({
       type: 'flex',
-      altText: `${event.message.text.trim()}`,
+      altText: `${event.message.text.trim()}的資訊`,
       contents: {
         type: 'carousel',
         contents: replies
