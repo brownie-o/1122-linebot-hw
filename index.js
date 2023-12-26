@@ -3,6 +3,7 @@ import linebot from 'linebot'
 import villagers from './commands/villagers.js'
 // import kind from './commands/kind.js'
 import kindVillagers from './commands/kindVillagers.js'
+import kindVillagers10up from './commands/kindVillagers10up.js'
 
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
@@ -412,7 +413,7 @@ bot.on('message', event => {
       event.message.text.trim() === '企鵝' ||
       event.message.text.trim() === '松鼠'
     ) {
-      kindVillagers(event)
+      kindVillagers10up(event)
     } else if (
       // 10-
       event.message.text.trim() === '食蟻獸' ||
