@@ -13,6 +13,14 @@
 
 ![botIns](./imgs/linebot_ins.psd)
 
-- (施工中)輸入物種可以查找該種類所有動物的資訊
+- 輸入種族可以查找該種類所有島民的資訊
 
 ![botIns2](./imgs/linebot_ins2.png)
+
+- 可點選 Rich Menu 查看使用說明
+
+![botIns3](./imgs/linebot_ins3.png)
+
+- 可點選 Rich Menu 查詢某種族的島民
+
+![botIns4](./imgs/linebot_ins4.png)

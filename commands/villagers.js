@@ -86,6 +86,9 @@ export default async (event) => {
         if (名字 === '阿三') {
           villager.Img = 'https://soopool.art/image/acnh/animal/Big%20Top.png'
         }
+        if (名字 === '山姆') {
+          villager.Img = 'https://soopool.art/image/acnh/animal/Wart%20Jr..png'
+        }
         const Img = villager.Img
         $ = cheerio.load(villager.Kind)
         const 種類 = $('a').text()

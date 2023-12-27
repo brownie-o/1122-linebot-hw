@@ -86,7 +86,7 @@ export default async (event) => {
       id = '鸟'
     } else if (event.message.text.trim() === '雞') {
       id = '鸡'
-    } else if (event.message.text.trim() === '雕') {
+    } else if (event.message.text.trim() === '鵰') {
       id = '鹰'
     }
     const replies = []

@@ -40,6 +40,18 @@ export default async (data, id, replies) => {
         $ = cheerio.load(villager.顏色2 || '')
         let 顏色2 = $('span').text()
         const 顏色3 = `${顏色 = (顏色 === '紅') ? '紅色' : 顏色}/${顏色2 = (顏色2 === '紅') ? '紅色' : 顏色2}`
+        if (名字 === '阿一') {
+          villager.Img = 'https://soopool.art/image/acnh/animal/Kid%20Cat.png'
+        }
+        if (名字 === '阿二') {
+          villager.Img = 'https://soopool.art/image/acnh/animal/Agent%20S.png'
+        }
+        if (名字 === '阿三') {
+          villager.Img = 'https://soopool.art/image/acnh/animal/Big%20Top.png'
+        }
+        if (名字 === '山姆') {
+          villager.Img = 'https://soopool.art/image/acnh/animal/Wart%20Jr..png'
+        }
         const Img = villager.Img
 
         const template = villagersTemplate()

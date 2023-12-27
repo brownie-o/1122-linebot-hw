@@ -3,7 +3,7 @@ import linebot from 'linebot'
 import villagers from './commands/villagers.js'
 // import kind from './commands/kind.js'
 import kindVillagers from './commands/kindVillagers.js'
-import kindVillagers10up from './commands/kindVillagers10up.js'
+import kindVillagers12up from './commands/kindVillagers12up.js'
 
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
@@ -27,7 +27,11 @@ bot.on('message', event => {
           `您可以在狸端機入口站👾查找島民的個人資訊。
 
 查詢方式: 
-直接輸入島民的 "姓名" 即可！`
+想尋找特定島民，直接輸入島民的 "姓名" 即可！
+
+想尋找特定種族，可以按選單的 "種族" 或直接輸入 "種族"，
+再依照快速回覆的選項往下細選。
+也可以直接輸入該種族(ex: 鴨子)查詢。`
       })
     } else if (event.message.text.includes('種族')) {
       event.reply({
@@ -80,7 +84,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '鸭',
+                text: '鴨子',
                 label: '鴨子'
               }
             },
@@ -96,7 +100,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '章鱼',
+                text: '章魚',
                 label: '章魚'
               }
             },
@@ -104,7 +108,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '河马',
+                text: '河馬',
                 label: '河馬'
               }
             },
@@ -112,7 +116,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '企鹅',
+                text: '企鵝',
                 label: '企鵝'
               }
             },
@@ -120,7 +124,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '鳄鱼',
+                text: '鱷魚',
                 label: '鱷魚'
               }
             }
@@ -137,7 +141,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '鸟',
+                text: '鳥',
                 label: '鳥'
               }
             },
@@ -145,7 +149,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '鸡',
+                text: '雞',
                 label: '雞'
               }
             },
@@ -153,15 +157,15 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '鹰',
-                label: '老鷹'
+                text: '雕',
+                label: '雕'
               }
             },
             {
               type: 'action',
               action: {
                 type: 'message',
-                text: '鸭',
+                text: '鴨子',
                 label: '鴨子'
               }
             }
@@ -186,7 +190,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '猫',
+                text: '貓',
                 label: '貓'
               }
             },
@@ -202,7 +206,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '考拉',
+                text: '無尾熊',
                 label: '無尾熊'
               }
             },
@@ -218,7 +222,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '猴',
+                text: '猴子',
                 label: '猴子'
               }
             },
@@ -234,7 +238,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '仓鼠',
+                text: '倉鼠',
                 label: '倉鼠'
               }
             },
@@ -250,7 +254,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '鹿',
+                text: '小鹿',
                 label: '小鹿'
               }
             },
@@ -266,7 +270,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '羊',
+                text: '綿羊',
                 label: '綿羊'
               }
             },
@@ -274,7 +278,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '猪',
+                text: '豬',
                 label: '豬'
               }
             }
@@ -291,7 +295,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '食蚁兽',
+                text: '食蟻獸',
                 label: '食蟻獸'
               }
             },
@@ -299,7 +303,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '马',
+                text: '馬',
                 label: '馬'
               }
             },
@@ -315,7 +319,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '牛',
+                text: '母牛',
                 label: '母牛'
               }
             },
@@ -347,7 +351,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '大猩猩',
+                text: '猩猩',
                 label: '猩猩'
               }
             },
@@ -363,7 +367,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '象',
+                text: '大象',
                 label: '大象'
               }
             },
@@ -371,7 +375,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '鸵鸟',
+                text: '鴕鳥',
                 label: '鴕鳥'
               }
             },
@@ -379,7 +383,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '虎',
+                text: '老虎',
                 label: '老虎'
               }
             },
@@ -387,7 +391,7 @@ bot.on('message', event => {
               type: 'action',
               action: {
                 type: 'message',
-                text: '狮子',
+                text: '獅子',
                 label: '獅子'
               }
             }
@@ -395,16 +399,14 @@ bot.on('message', event => {
         }
       })
     } else if (
-      // 10+
+      // 12+
       event.message.text.trim() === '鴨子' ||
       event.message.text.trim() === '狗' ||
       event.message.text.trim() === '兔子' ||
       event.message.text.trim() === '馬' ||
-      event.message.text.trim() === '狼' ||
       event.message.text.trim() === '青蛙' ||
       event.message.text.trim() === '熊' ||
       event.message.text.trim() === '小熊' ||
-      event.message.text.trim() === '大象' ||
       event.message.text.trim() === '鳥' ||
       event.message.text.trim() === '貓' ||
       event.message.text.trim() === '老鼠' ||
@@ -413,9 +415,11 @@ bot.on('message', event => {
       event.message.text.trim() === '企鵝' ||
       event.message.text.trim() === '松鼠'
     ) {
-      kindVillagers10up(event)
+      kindVillagers12up(event)
     } else if (
-      // 10-
+      // 12-
+      event.message.text.trim() === '狼' ||
+      event.message.text.trim() === '大象' ||
       event.message.text.trim() === '食蟻獸' ||
       event.message.text.trim() === '公牛' ||
       event.message.text.trim() === '河馬' ||
